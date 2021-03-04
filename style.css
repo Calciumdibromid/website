@@ -33,6 +33,10 @@ body {
     color: #6c6c75;
 }
 
+.black {
+    color: black;
+}
+
 .shadow {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -71,4 +75,20 @@ body {
 
 .navbar-item:hover {
     color: #f39100 !important;
+}
+
+.box-title {
+    font-size: 1.2em;
+}
+
+.margin-impressum {
+    margin-left: 1100px;
+}
+
+.margin-left {
+    margin-left: 10px;
+}
+
+.margin-right {
+    margin-right: 10px;
 }
