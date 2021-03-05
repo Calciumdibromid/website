@@ -29,6 +29,10 @@ body {
     color: #f39100;
 }
 
+.black-hover:hover {
+    color: black;
+}
+
 .gray {
     color: #6c6c75;
 }
@@ -81,8 +85,9 @@ body {
     font-size: 1.2em;
 }
 
-.margin-impressum {
-    margin-left: 1100px;
+.float-right {
+    float: right;
+    margin-right: 10px;
 }
 
 .margin-left {
@@ -90,5 +95,23 @@ body {
 }
 
 .margin-right {
-    margin-right: 10px;
+    margin-right: 12px;
+}
+
+.margin-left-30 {
+    margin-left: 30px;
+}
+
+.margin-left-40 {
+    margin-left: 40px;
+}
+
+.card {
+    margin-bottom: 10px;
+}
+
+.card-header {
+    flex-grow: 0;
+    justify-content: space-between;
+    align-items: center;
 }
