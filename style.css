@@ -23,6 +23,8 @@ body {
     background: #f39100;
     height: 40px;
     width: 100%;
+    position:absolute;
+    bottom:0;
 }
 
 .orange {
@@ -58,6 +60,7 @@ body {
 
 .container {
     background: white;
+    height: 100%;
 }
 
 .inner-container {
