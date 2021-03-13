@@ -1,8 +1,17 @@
 body {
-    background: #333333;
+    /* background: #333333; */
     /* background: #6c6c75; */
     color: black;
     font-size: 1.3em;
+}
+
+.background {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #333333;
 }
 
 .gray-banner {
@@ -23,8 +32,18 @@ body {
     background: #f39100;
     height: 40px;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+}
+
+@media screen and (min-width: 1408px) {
+    .orange-ending:not(.is-max-desktop):not(.is-max-widescreen) {
+        max-width: 1344px;
+    }
+}
+
+@media screen and (min-width: 1216px) {
+    .orange-ending:not(.is-max-desktop) {
+        max-width: 1152px;
+    }
 }
 
 .orange {
@@ -59,12 +78,13 @@ body {
 }
 
 .container {
-    background: white;
+    /* background: white; */
     height: 100%;
 }
 
 .inner-container {
     padding: 50px;
+    background: white;
 }
 
 .title {
