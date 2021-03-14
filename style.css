@@ -3,6 +3,7 @@ body {
     /* background: #6c6c75; */
     color: black;
     font-size: 1.3em;
+    min-height: 100vh;
 }
 
 .background {
@@ -12,6 +13,7 @@ body {
     top: 0;
     left: 0;
     background: #333333;
+    z-index: -1;
 }
 
 .gray-banner {
@@ -54,6 +56,10 @@ body {
     color: black;
 }
 
+.black-hover-link:hover :is(img, span) {
+    color: black;
+}
+
 .gray {
     color: #6c6c75;
 }
@@ -77,14 +83,10 @@ body {
     width: 60px;
 }
 
-.container {
-    /* background: white; */
-    height: 100%;
-}
-
 .inner-container {
     padding: 50px;
     background: white;
+    min-height: 69vh;
 }
 
 .title {
