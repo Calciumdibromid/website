@@ -8,17 +8,28 @@
     <title>CaBr₂ - Download</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="functions.js"></script>
 </head>
 
 <body>
     <div class="background"></div>
     <div class="container">
         <nav class="navbar gray-banner shadow" role="navigation">
-            <div class="navbar-menu">
+            <div class="navbar-brand">
+                <div href="download.html" class="navbar-item orange" id="hidden">
+                    Download
+                </div>
+                <a role="button" id="hamburger" class="navbar-burger orange" onclick="openNavbar()">
+                    <span class="burger-span" aria-hidden="true"></span>
+                    <span class="burger-span" aria-hidden="true"></span>
+                    <span class="burger-span" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navbar-menu">
                 <a href="index.html" class="navbar-item">
                     CaBr₂
                 </a>
-                <a href="download.html" class="navbar-item">
+                <a href="download.html" class="navbar-item" id="hidden-mobile">
                     Download
                 </a>
                 <a href="anleitung.html" class="navbar-item">
@@ -27,7 +38,7 @@
                 <a href="news.html" class="navbar-item">
                     News
                 </a>
-                <a href="" class="navbar-end navbar-item margin-right">
+                <a href="" class="navbar-end navbar-item margin-right"  id="language">
                     DE
                 </a>
             </div>
@@ -36,10 +47,7 @@
         </div>
         <img class="logo" src="./assets/Square310x310Logo.png" alt="CaBr&#8322; Logo">
         <div class="inner-container">
-            <br>
             <h1 class="title is-1">Calciumdibromid - Download</h1>
-            <br>
-            <br>
             <p>
                 Calciumdibromid wurde von Informatikstudenten der TH Rosenheim für den Campus Burghausen programmiert.
             </p>
@@ -49,15 +57,13 @@
                 Dieses wurde lange nicht mehr weiterentwickelt und wegen Änderungen in den Quellen ist es mittlerweile
                 in seinen Funktionen eingeschränkt.
             </p>
-            <br>
             <p>
                 Da CaBr<sub>2</sub> ein Open-Source-Projekt ist, kann man sich hier die aktuellste Version kostenlos
                 downloaden:
             </p>
-            <br>
             <p class="box-title">
             <ul>
-                <li>
+                <li class="download-button">
                     <a class="black-hover-link margin-left-30" href="https://app.cabr2.de">
                         <img class="icon-for-table" src="./assets/Square310x310Logo.png" style="vertical-align: middle;"/>
                         <span class="orange margin-left" style="vertical-align: middle;">Link zur Webapp CaBr<sub>2</sub></span>
@@ -83,12 +89,10 @@
             </ul>
             </p>
             -->
-            <br>
             <p>
                 Wer genauere Informationen zum Programm wissen möchte, kann sich den Code dazu auf <a
                     href="https://github.com/Calciumdibromid/CaBr2" class="orange">GitHub</a> anschauen.
             </p>
-            <br>
             <p>
                 Dort befinden sich auch genauere Informationen zur Lizenz. Diese besagt grob zusammengefasst, dass der
                 Code verwendet
@@ -97,12 +101,12 @@
             </p>
         </div>
         <div class="orange-ending">
-            <p class="margin-left">
+            <div class="margin-left">
                 2021 CaBr<sub>2</sub>
                 <b>
                     <a class="black float-right" href="impressum.html">Impressum</a>
                 </b>
-            </p>
+            </div>
         </div>
     </div>
 </body>

@@ -6,6 +6,22 @@ body {
     min-height: 100vh;
 }
 
+p {
+    margin: 25px 0;
+}
+
+hr {
+    margin: 50px 0;
+}
+
+.margin-25-0 {
+    margin: 25px 0;
+}
+
+.margin-bottom-5px {
+    margin-bottom: 5px;
+}
+
 .background {
     min-height: 100%;
     min-width: 100%;
@@ -36,20 +52,8 @@ body {
     width: 100%;
 }
 
-@media screen and (min-width: 1408px) {
-    .orange-ending:not(.is-max-desktop):not(.is-max-widescreen) {
-        max-width: 1344px;
-    }
-}
-
-@media screen and (min-width: 1216px) {
-    .orange-ending:not(.is-max-desktop) {
-        max-width: 1152px;
-    }
-}
-
 .orange {
-    color: #f39100;
+    color: #f39100 !important;
 }
 
 .black-hover:hover {
@@ -105,6 +109,10 @@ body {
     color: #f39100 !important;
 }
 
+.navbar-brand {
+    margin: 0 !important;
+}
+
 .box-title {
     font-size: 1.2em;
 }
@@ -142,4 +150,89 @@ body {
     flex-grow: 0;
     justify-content: space-between;
     align-items: center;
+}
+
+.card-content {
+    display: none;
+}
+
+#hidden {
+    display: none;
+}
+
+/* -------------------------------------------------------------------- */
+
+@media screen and (min-width: 1408px) {
+    .orange-ending:not(.is-max-desktop):not(.is-max-widescreen) {
+        max-width: 1344px;
+    }
+}
+
+@media screen and (min-width: 1216px) {
+    .orange-ending:not(.is-max-desktop) {
+        max-width: 1152px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.3rem !important;
+        margin-right: 0 !important;
+        margin-top: 65px !important;
+    }
+
+    p {
+        margin-left: 25px;
+        margin-right: 5px !important;
+        font-size: smaller;
+        overflow-wrap: break-word;
+    }
+
+    img {
+        width: 97%;
+        margin-left: 5px !important;
+    }
+
+    li:not(.download-button) {
+        margin-left: 25px;
+    }
+
+    .inner-container {
+        padding-top: 5px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    .orange-banner {
+        height: 160px;
+    }
+
+    .orange-ending {
+        font-size: smaller;
+        height: auto;
+    }
+
+    .burger-span {
+        height: 2px !important;
+    }
+
+    .card, .box {
+        margin: 10px;
+    }
+
+    #language {
+        display: none;
+    }
+
+    #hidden-mobile {
+        display: none;
+    }
+
+    #hidden {
+        display: unset;
+    }
 }
