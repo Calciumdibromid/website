@@ -10,14 +10,25 @@ https://www.w3schools.com/html/html_lists.asp-->
     <title>CaBr₂ - Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="functions.js"></script>
 </head>
 
 <body>
     <div class="background"></div>
     <div class="container">
         <nav class="navbar gray-banner shadow" role="navigation">
-            <div class="navbar-menu">
-                <a href="index.html" class="navbar-item">
+            <div class="navbar-brand">
+                <div href="index.html" class="navbar-item orange" id="hidden">
+                    CaBr₂
+                </div>
+                <a role="button" id="hamburger" class="navbar-burger orange" onclick="openNavbar()">
+                    <span class="burger-span" aria-hidden="true"></span>
+                    <span class="burger-span" aria-hidden="true"></span>
+                    <span class="burger-span" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu gray" id="navbar-menu">
+                <a href="index.html" class="navbar-item" id="hidden-mobile">
                     CaBr₂
                 </a>
                 <a href="download.html" class="navbar-item">
@@ -29,7 +40,7 @@ https://www.w3schools.com/html/html_lists.asp-->
                 <a href="news.html" class="navbar-item">
                     News
                 </a>
-                <a href="" class="navbar-end navbar-item margin-right">
+                <a href="" class="navbar-end navbar-item margin-right" id="language">
                     DE
                 </a>
             </div>
@@ -38,40 +49,29 @@ https://www.w3schools.com/html/html_lists.asp-->
         </div>
         <img class="logo" src="./assets/Square310x310Logo.png" alt="CaBr&#8322; Logo">
         <div class="inner-container">
-            <br>
             <h1 class="title is-1">Calciumdibromid - CaBr<sub>2</sub></h1>
-            <br>
-            <br>
             <p>
                 <b>
                     CaBr<sub>2</sub> ist ein Programm zur Erstellung von Betriebsanweisungen
                     für Laboreinheiten nach EG Nr. 1272/2008.
                 </b>
             </p>
-            <br>
-            <br>
             <p>
                 Bei CaBr<sub>2</sub> handelt es sich um ein Open-Source-Projekt (siehe <a class="orange"
                     href="https://github.com/Calciumdibromid/CaBr2/blob/master/LICENSE">Lizenz</a>)
                 und daher basiert die Verwendung der generierten Betriebsanweisungen auf Eigenverantwortung.
             </p>
-            <br>
             <p>
                 Die folgenden Bilder zeigen das Programm und mögliche Betriebsanweisungen:
             </p>
-            <br>
-            <img class="border" src="./assets/first_preview.png" alt="Program preview">
-            <br>
-            <br>
-            <img class="border" src="./assets/second_preview_1.png" alt="Datasheet preview 1" height= "auto" width= "618px"> 
+            <img class="border margin-25-0" src="./assets/first_preview.png" alt="Program preview">
+
+            <img class="border margin-bottom-5px" src="./assets/second_preview_1.png" alt="Datasheet preview 1" height= "auto" width= "618px"> 
             <img class="border" src="./assets/second_preview_2.png" alt="Datasheet preview 2" height= "auto" width= "617px">
-            <br>
-            <br>
             <p>
                 Betriebsanweisungen dienen im Labor als Informationsquelle für die wichtigen Daten
                 der verwendeten Chemikalien.
             </p>
-            <br>
             <p>
                 Bevor mit unbekannten Stoffen Versuche durchgeführt werden, sollte man über
                 mögliche Gefahren oder Gefährdungen anderer Bescheid wissen.
@@ -81,57 +81,45 @@ https://www.w3schools.com/html/html_lists.asp-->
                 Verletzungen vermeiden kann.
                 Jedoch sollte zudem sofort fachliche Hilfe geholt werden.
             </p>
-            <br>
             <hr>
-            <br>
             <p>
                 Die Daten zum Befüllen der Betriebsanweisungen beziehen sich auf mehrere Quellen,
                 die individuell in den Einstellungen ausgewählt werden können:
-                <br>
-                <br>
                 <li><a class="orange" href="https://gestis.dguv.de/search">Gestis-Stoffdatenbank</a></li>
             </p>
-            <br>
             <p class="gray">
                 (Die Quellen werden in den folgenden Versionen erweitert)
             </p>
-            <br>
             <hr>
-            <br>
             <p>
                 <b>
                     CaBr<sub>2</sub> kann unter <a href="download.html" class="orange">Downloads</a> kostenlos heruntergeladen
                     werden.
                 </b>
             </p>
-            <br>
             <p>
                 Genauere Informationen über das Projekt und der Sourcecode ist unter <a
                     href="https://github.com/Calciumdibromid/CaBr2" class="orange">GitHub</a>
                 zu finden.
             </p>
-            <br>
             <hr>
-            <br>
             <p>
                 Unter <a href="anleitung.html" class="orange">Anleitung</a> befindet sich eine genaue Beschreibung zu
                 CaBr<sub>2</sub> für jedes Feature. Bei Unverständlichkeiten kann dort nachgeschaut werden.
             </p>
-            <br>
             <hr>
-            <br>
             <p>
                 In <a href="news.html" class="orange">News</a> werden Neuigkeiten und Neuerungen zu Updates oder
                 wichtige Informationen zu CaBr<sub>2</sub> veröffentlicht.
             </p>
         </div>
         <div class= "orange-ending">
-            <p class= "margin-left">
+            <div class= "margin-left">
                 2021 CaBr<sub>2</sub>
                 <b>
                     <a class= "black float-right" href="impressum.html" >Impressum</a>
                 </b>
-            </p>
+            </div>
         </div>
     </div>
 </body>
