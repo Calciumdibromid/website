@@ -9,26 +9,37 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-5.15.2-web/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="functions.js"></script>
 </head>
 
 <body>
     <div class="background"></div>
     <div class="container">
         <nav class="navbar gray-banner shadow" role="navigation">
-            <div class="navbar-menu">
+            <div class="navbar-brand">
+                <div href="anleitung.html" class="navbar-item orange" id="hidden">
+                    Anleitung
+                </div>
+                <a role="button" id="hamburger" class="navbar-burger orange" onclick="openNavbar()">
+                    <span class="burger-span" aria-hidden="true"></span>
+                    <span class="burger-span" aria-hidden="true"></span>
+                    <span class="burger-span" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu"  id="navbar-menu">
                 <a href="index.html" class="navbar-item">
                     CaBr₂
                 </a>
                 <a href="download.html" class="navbar-item">
                     Download
                 </a>
-                <a href="anleitung.html" class="navbar-item">
+                <a href="anleitung.html" class="navbar-item" id="hidden-mobile">
                     Anleitung
                 </a>
                 <a href="news.html" class="navbar-item">
                     News
                 </a>
-                <a href="" class="navbar-end navbar-item margin-right">
+                <a href="" class="navbar-end navbar-item margin-right" id="language">
                     DE
                 </a>
             </div>
@@ -37,10 +48,7 @@
         </div>
         <img class="logo" src="./assets/Square310x310Logo.png" alt="CaBr&#8322; Logo">
         <div class="inner-container">
-            <br>
             <h1 class="title is-1">Calciumdibromid - Anleitung</h1>
-            <br>
-            <br>
             <p>
                 Falls bei der Anwendung von CaBr<sub>2</sub> Unverständlichkeiten auftreten, befindet sich
                 hier zu jedem Punkt eine ausführliche Erklärung.
@@ -53,40 +61,38 @@
                         <header class="card-header shadow">
                             <li class="orange margin-left-30">Eingaben zu Beginn des Programms | Überschriften der
                                 Betreibsanweisung</li>
-                            <a class="card-header-icon">
+                            <a class="card-header-icon" onclick="collapse('card1')">
                                 <span class="icon">
-                                    <i class="fas fa-angle-down orange black-hover" aria-hidden="true"></i>
+                                    <i class="fas fa-angle-up orange black-hover" id="card1-icon" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </header>
-                        <div class="card-content">
+                        <div class="card-content" id="card1">
                             <div class="content">
-                                <img src="./assets/first_introduction.png" alt="first_introduction" class="border margin-left-30">
-                                <br>
-                                <br>
+                                <img src="./assets/first_introduction.png" alt="first_introduction" class="border margin-left-30 margin-25-0">
                                 <p>
                                     Die erste Box im Programm ist zum Bearbeiten der Überschriften der
                                     Betriebsanweisungen.
                                     Alle eingetragenen Informationen werden direkt in die Vorschau und in das PDF
                                     eingefügt.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Das erste Eingabefeld legt den Titel des PDFs fest. Hierbei handelt es sich um eine
                                     Betreibsanweisung nach EG Nr. 1272/2008.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Im Eingabefeld darunter wird die Organisation festgelegt. Meistens wird die
                                     Hochschule und oder das Labor erwähnt, in dem der Versuch durchgeführt wird.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Das nächste große Eingabefeld darunter beschreibt das Modul oder Fach, für das die
                                     Betreibsanweisung erstellt wird.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Bei den nächsten drei Eingabefeldern handelt es sich um den Name des Studenten,
                                     der Platznummer im Labor und den Name des Betreuers oder Assistents.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Das letzte große Eingabefeld in der obersten Box beschreibt den Versuch, für welchen
                                     die
                                     Betreibsanweisung mit den verwendeten Chemikalien und Substanzen erstellt wird.
@@ -102,32 +108,30 @@
                         <header class="card-header shadow">
                             <li class="orange margin-left-30">Suche und exakte Suche</li>
                             <a class="card-header-icon">
-                                <span class="icon">
-                                    <i class="fas fa-angle-down orange black-hover" aria-hidden="true"></i>
+                                <span class="icon"  onclick="collapse('card2')">
+                                    <i class="fas fa-angle-up orange black-hover" id="card2-icon" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </header>
-                        <div class="card-content">
+                        <div class="card-content" id="card2">
                             <div class="content">
-                                <img src="./assets/second_introduction.png" alt="second_introduction" class="border margin-left-30">
-                                <br>
-                                <br>
+                                <img src="./assets/second_introduction.png" alt="second_introduction" class="border margin-left-30 margin-25-0">
                                 <p>
                                     In der zweiten Box gibt es die Möglichkeit nach Stoffen zu suchen, welche in
                                     der Betreibsanweisung vorkommen sollen.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Unter Suchoption kann man zwischen <b>Stoffname</b>, <b>Summenformel</b>,
                                     <b>Nummern</b> oder <b>Volltext</b> auswählen, wenn man nur mit einem Filter suchen
                                     will.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Wenn man mit mehreren Filtern suchen möchte, gibt es die Möglichkeit durch Klicken
                                     auf das Plus unterhalb der Suchoptionen weitere Filter hinzuzufügen. Diese können
                                     rechts
                                     am Ende der Suchleiste wieder gelöscht werden.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Nachdem man eine Substanz eingegeben und auf Suchen oder Enter geklickt hat,
                                     öffnet sich ein Fenster, welches alle möglichen Suchergebnisse aufzeigt.
                                     <br>
@@ -135,16 +139,16 @@
                                     werden nicht aufgetragen.
                                     <br>
                                     Die Stoffe werden mit der CAS-Nummer angegeben.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Oftmals jedoch sucht man nur nach dem Stoff selbst. Falls es sich um eine Stoff
                                     handelt, von dem es viele Verbindungen gibt, kann man durch aktivieren der
                                     <b>Exakten Suche</b> direkt danach suchen.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Ein Stoff kann nicht mehrfach hinzugefügt werden.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Jeder hinzugefügte Stoff wird nach Auswählen und "Ok" drücken unterhalb der Suche zu
                                     einer Liste hinzugefügt.
                                 </p>
@@ -157,17 +161,15 @@
                         <header class="card-header shadow">
                             <li class="orange margin-left-30">Bearbeitung ausgewähler Chemikalien</li>
                             <a class="card-header-icon">
-                                <span class="icon">
-                                    <i class="fas fa-angle-down orange black-hover" aria-hidden="true"></i>
+                                <span class="icon" onclick="collapse('card3')">
+                                    <i class="fas fa-angle-up orange black-hover" id="card3-icon" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </header>
-                        <div class="card-content">
+                        <div class="card-content" id="card3">
                             <div class="content">
                                 <img src="./assets/third_introduction.png" style="height: 600px;"
-                                    alt="third_introduction" class="border margin-left-30">
-                                <br>
-                                <br>
+                                    alt="third_introduction" class="border margin-left-30 margin-25-0">
                                 <p>
                                     Unter der Suche werden die in der Suche ausgewählten Substanzen in einer Liste
                                     aufgeführt.
@@ -176,32 +178,32 @@
                                     Provider zeigt, wo die Informationen zur Chemikalie herkommt und durch Klicken auf
                                     den Provider wird man zur ursprünglichen Quelle weitergeleitet und kann dort die
                                     Informationen der Substanz überprüfen oder vervollständigen.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Klickt man auf die hinzugefügte Chemikalie, so öffnet sich ein Fenster mit den
                                     Informationen zur Chemikalie.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     In diesem Fenster kann man
                                     <!--zwischen verschiedenen Namen wählen, falls es
                                     unterschiedliche gibt, und -->eine Mengenangabe hinzufügen. Außerdem ist es
                                     möglich,
                                     alle weiteren Informationen zu bearbeiten oder weitere hinzuzufügen.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Wenn man in dem angezeigtem Fenster nach unten scrollt, werden die H- und P-Sätze
                                     angegeben und am Ende die Gefahrensymbole aufgezeigt.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Die rotmarkierten Symbole sind die für den Stoff geltenden Symbole. Falls ein Symbol
                                     zu viel oder fehlen sollte, kann durch klicken auf das entsprechende Symbol entfernt
                                     oder hinzugefügt werden.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Alle Bearbeitungen sind <b>sichtbar</b> in der Vorschau und auf der erstellten
                                     Betriebsanweisung.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Wurde eine Chemikalie fälschlicherweise hinzugefügt, kann diese durch Klicken auf
                                     den "Papierkorb" entfernt werden.
                                 </p>
@@ -213,35 +215,31 @@
                     <div class="card shadow">
                         <header class="card-header shadow">
                             <li class="orange margin-left-30">Angaben zu Umwelt, Schutzmaßnahmen und Entsorgung</li>
-                            <a class="card-header-icon">
+                            <a class="card-header-icon" onclick="collapse('card4')">
                                 <span class="icon">
-                                    <i class="fas fa-angle-down orange black-hover" aria-hidden="true"></i>
+                                    <i class="fas fa-angle-up orange black-hover" id="card4-icon" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </header>
-                        <div class="card-content">
+                        <div class="card-content" id="card4">
                             <div class="content">
-                                <img src="./assets/fourth_introduction.png" alt="fourth_introduction" class="border margin-left-10">
-                                <br>
-                                <br>
+                                <img src="./assets/fourth_introduction.png" alt="fourth_introduction" class="border margin-left-10 margin-25-0">
                                 <p>
                                     Die nächsten vier Boxen sind zum Bearbeiten der zweiten Seite der Betriebsanweisung.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     <b>
                                         Hier ist es wichtig zu wissen, dass alle Inhalte, die bereits eingefügt sind,
                                         nicht aus den Quellen genommen werden! Diese sind als Standard zu Beginn jeder
                                         Betriebsanweisung eingefügt und müssen daher auf Richtigkeit und Vollständigkeit
                                         überprüft werden!
                                     </b>
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Falls zu den einzelnen Unterthemen Inhalte hinzugefügt werden müssen, kann mit Hilfe
                                     des Plusses eine neue Zeile zum Bearbeiten hinzugefügt werden. Mit dem Minus am Ende
                                     der
                                     Zeile ist es möglich, einen kompletten Eintrag zu löschen.
-                                    <br>
-                                    <br>
                                 </p>
                             </div>
                         </div>
@@ -251,21 +249,21 @@
                     <div class="card shadow">
                         <header class="card-header shadow">
                             <li class="orange margin-left-30">Vorschau</li>
-                            <a class="card-header-icon">
+                            <a class="card-header-icon"  onclick="collapse('card5')">
                                 <span class="icon">
-                                    <i class="fas fa-angle-down orange black-hover" aria-hidden="true"></i>
+                                    <i class="fas fa-angle-up orange black-hover" id="card5-icon" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </header>
-                        <div class="card-content">
+                        <div class="card-content" id="card5">
                             <div class="content">
                                 <p>
                                     Die Vorschau am Ende des Programms zeigt eine mögliche Version der
                                     Betriebsanweisung.
                                     <br>
                                     <b>Die tatsächliche PDF kann davon abweichen.</b>
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Alle Informationen, die in den Boxen zuvor hinzugefügt wurden, können in der
                                     Vorschau kontrolliert
                                     werden.
@@ -278,22 +276,20 @@
                     <div class="card shadow">
                         <header class="card-header shadow">
                             <li class="orange margin-left-30">Speichern oder Exportieren der Betreibsanweisung</li>
-                            <a class="card-header-icon">
+                            <a class="card-header-icon" onclick="collapse('card6')">
                                 <span class="icon">
-                                    <i class="fas fa-angle-down orange black-hover" aria-hidden="true"></i>
+                                    <i class="fas fa-angle-up orange black-hover" id="card6-icon" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </header>
-                        <div class="card-content">
+                        <div class="card-content" id="card6">
                             <div class="content">
-                                <img src="./assets/sixth_introduction.png" alt="sixth_introduction" class="border margin-left-30">
-                                <br>
-                                <br>
+                                <img src="./assets/sixth_introduction.png" alt="sixth_introduction" class="border margin-left-30 margin-25-0">
                                 <p>
                                     Erstellte Betriebsanweisungen können als Calciumdibromid-Datei (<code>.cb2</code>)
                                     gespeichert oder als PDF-Datei exportiert werden.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Beide Möglichkeiten findet man unter "Menü" oben links.
                                 </p>
                             </div>
@@ -304,22 +300,20 @@
                     <div class="card shadow">
                         <header class="card-header shadow">
                             <li class="orange margin-left-30">Bestehende Betriebsanweisungen öffnen</li>
-                            <a class="card-header-icon">
+                            <a class="card-header-icon" onclick="collapse('card7')">
                                 <span class="icon">
-                                    <i class="fas fa-angle-down orange black-hover" aria-hidden="true"></i>
+                                    <i class="fas fa-angle-up orange black-hover" id="card7-icon" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </header>
-                        <div class="card-content">
+                        <div class="card-content" id="card7">
                             <div class="content">
-                                <img src="./assets/seventh_introduction.png" alt="seventh_introduction" class="border margin-left-30">
-                                <br>
-                                <br>
+                                <img src="./assets/seventh_introduction.png" alt="seventh_introduction" class="border margin-left-30 margin-25-0">
                                 <p>
                                     Calciumdibromid-Dateien können unter "Menü" wieder geöffnet und
                                     bearbeitet werden.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Dies funktioniert größtenteils auch für alte Beryllium10-Dateien
                                     (<code>.be</code>).
                                 </p>
@@ -331,22 +325,20 @@
                     <div class="card shadow">
                         <header class="card-header shadow">
                             <li class="orange margin-left-30">Weitere Einstellungen in CaBr<sub>2</sub></li>
-                            <a class="card-header-icon">
+                            <a class="card-header-icon" onclick="collapse('card8')">
                                 <span class="icon">
-                                    <i class="fas fa-angle-down orange black-hover" aria-hidden="true"></i>
+                                    <i class="fas fa-angle-up orange black-hover" id="card8-icon" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </header>
-                        <div class="card-content">
+                        <div class="card-content" id="card8">
                             <div class="content">
-                                <img src="./assets/eighth_introduction.png" alt="eighth_introduction" class="border margin-left-30">
-                                <br>
-                                <br>
+                                <img src="./assets/eighth_introduction.png" alt="eighth_introduction" class="border margin-left-30 margin-25-0">
                                 <p>
                                     Im Menü gibt es die Möglichkeit in den Einstellungen die Sprache und
                                     das Theme zu ändern.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Diese Einstellungen werden im Programm gespeichert und beim nächsten
                                     Öffnen automatisch geladen.
                                 </p>
@@ -361,7 +353,7 @@
                             <li class="orange margin-left-30">Plug-ins</li>
                             <a class="card-header-icon">
                                 <span class="icon">
-                                    <i class="fas fa-angle-down orange black-hover" aria-hidden="true"></i>
+                                    <i class="fas fa-angle-up orange black-hover" id="card9-icon" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </header>
@@ -377,53 +369,53 @@
                     <div class="card shadow">
                         <header class="card-header shadow">
                             <li class="orange margin-left-40">Bug-Report | Feedback | Datenschutz</li>
-                            <a class="card-header-icon">
+                            <a class="card-header-icon"  onclick="collapse('card10')">
                                 <span class="icon">
-                                    <i class="fas fa-angle-down orange black-hover" aria-hidden="true"></i>
+                                    <i class="fas fa-angle-up orange black-hover" id="card10-icon" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </header>
-                        <div class="card-content">
+                        <div class="card-content" id="card10">
                             <div class="content">
-                                <img src="./assets/tenth_introduction.png" alt="tenth_introduction" class="border margin-left-30">
-                                <br>
-                                <br>
+                                <img src="./assets/tenth_introduction.png" alt="tenth_introduction" class="border margin-left-30 margin-25-0">
                                 <p>
                                     Feedback und Bug-Reports sind extrem wichtig, um das Programm möglichst fehlerfrei
                                     zu bekommen und zu optimieren, da CaBr<sub>2</sub> sich noch in der Entwicklung
                                     befindet.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Aufgrund komplexem Parsing kann es noch zu unvollständigen oder fehlerhaften
                                     Suchergebnissen kommen und um die Suche verlässlicher und genauer gestalten zu
                                     können, müssen die Stoffe analysiert werden, bei denen Probleme bei der Suche
                                     aufgetreten sind.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Im Programm befindet sich links unten über der Versionsnummer ein
                                     "Bug-Report/Feedback-Icon".
                                     <br>
                                     Damit ist es möglich, mit den Entwicklern in Kontakt zu treten.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Je detailreicher und genauer die Beschreibungen sind und je einfacher das Problem
                                     nachvollzogen werden kann, desto einfacher und schneller kann der Bug gefixt oder
                                     das Feature eingebaut werden.
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     <b>
                                         Wichtig ist aber, dass es sich hier um ein Open-Source-Projekt handelt.
                                         Falls nicht sofort geantwortet wird oder ein neues Update veröffentlich wird,
                                         bitte Gedult haben:
                                         die Entwickler haben dieses Programm freiwillig entwickelt und können nicht zu
                                         jeder Zeit daran arbeiten.
-                                        <br>
-                                        <br>
+                                    </b>
+                                </p>
+                                <p>
+                                    <b>
                                         Zudem ist es wichtig, dass der Bug-Report nicht missbraucht und zugespamt wird.
                                         Sonst werden Reports (auch sehr nützliche) nicht mehr bearbeitet.
                                     </b>
-                                    <br>
-                                    <br>
+                                </p>
+                                <p>
                                     Mit jeglichen Daten wird vorsorglich umgegangen und nichts wird an Dritte
                                     weitergegeben. Jeder Bug-Report erfolgt freiwillig und jeder Nutzer ist für den
                                     Inhalt und dessen Versenden selbstverantwortlich.
@@ -434,14 +426,11 @@
                 </ol>
             </div>
 
-            <br>
-            <br>
             <p>
                 Falls die Anleitungen nicht weiterhelfen, weitere Fragen oder Anregungen bestehen,
                 gibt es die Möglichkeit mit den Entwicklern auf folgenden Plattformen Kontakt aufzunehmen:
             </p>
-            <br>
-            <a href="mailto:cabr2.help@gmail.com">
+            <a href="mailto:cabr2.help@gmail.com" class="margin-25-0">
                 <img class="margin-left-400" src="./assets/email.png" alt="email" width="60px">
             </a>
             <!--<p style="color: red">
@@ -453,12 +442,12 @@
             -->
         </div>
         <div class="orange-ending">
-            <p class="margin-left">
+            <div class="margin-left">
                 2021 CaBr<sub>2</sub>
                 <b>
                     <a class="black float-right" href="impressum.html">Impressum</a>
                 </b>
-            </p>
+            </div>
         </div>
     </div>
 </body>

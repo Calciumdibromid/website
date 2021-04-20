@@ -8,13 +8,24 @@
     <title>CaBr₂ - News</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="functions.js"></script>
 </head>
 
 <body>
     <div class="background"></div>
     <div class="container">
         <nav class="navbar gray-banner shadow" role="navigation">
-            <div class="navbar-menu">
+            <div class="navbar-brand margin-left-10">
+                <div href="news.html" class="navbar-item orange" id="hidden">
+                    News
+                </div>
+                <a role="button" id="hamburger" class="navbar-burger orange" onclick="openNavbar()">
+                    <span class="burger-span" aria-hidden="true"></span>
+                    <span class="burger-span" aria-hidden="true"></span>
+                    <span class="burger-span" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu"  id="navbar-menu">
                 <a href="index.html" class="navbar-item">
                     CaBr₂
                 </a>
@@ -24,10 +35,10 @@
                 <a href="anleitung.html" class="navbar-item">
                     Anleitung
                 </a>
-                <a href="news.html" class="navbar-item">
+                <a href="news.html" class="navbar-item" id="hidden-mobile">
                     News
                 </a>
-                <a href="" class="navbar-end navbar-item margin-right">
+                <a href="" class="navbar-end navbar-item margin-right" id="language">
                     DE
                 </a>
             </div>
@@ -36,10 +47,7 @@
         </div>
         <img class="logo" src="./assets/Square310x310Logo.png" alt="CaBr&#8322; Logo">
         <div class="inner-container">
-            <br>
             <h1 class="title is-1">Calciumdibromid - News</h1>
-            <br>
-            <br>
             <p>
                 Hier werden wichtige Neuigkeiten und Informationen zu Updates veröffentlicht.
             </p>
@@ -81,18 +89,15 @@
                     News zur ersten Version (vorerst als Webapp)
                 </b>
                 veröffentlicht am 14.03.2021
-                <br>
-                <br>
                 <p>
                     Da es noch Probleme bei der Kompilierung in Windows gibt, wird die Alpha-Version von
                     CaBr<sub>2</sub> vorerst als Webapp
                     veröffentlicht. Sobald dieses Problem gelöst ist, gibt es CaBr<sub>2</sub> als Programm für den PC.
-                    <br>
-                    <br>
-                    Unter <a href="download.html" class="orange">Downloads</a> befindet sich der Link zu
-                    CaBr<sub>2</sub>!
-                    <br>
-                    <br>
+                </p>
+                <p>
+                    Unter <a href="download.html" class="orange">Downloads</a> befindet sich der Link zu CaBr<sub>2</sub>!
+                </p>
+                <p>
                     <b>
                         Features:
                     </b>
@@ -100,7 +105,6 @@
                     <li>Es gibt ein Dark-Theme!</li>
                     <li>Die "Getting-Started"-Einweisung kann im Menü nocheinmal angeschaut werden</li>
                 </p>
-                <br>
                 <p>
                     <b>
                         Wichtig!
@@ -114,15 +118,14 @@
                 </p>
             </div>
         </div>
-        <div class="orange-ending">
-            <p class="margin-left">
+        <div class= "orange-ending">
+            <div class="margin-left">
                 2021 CaBr<sub>2</sub>
                 <b>
                     <a class="black float-right" href="impressum.html">Impressum</a>
                 </b>
-            </p>
+            </div>
         </div>
     </div>
 </body>
-
 </html>
